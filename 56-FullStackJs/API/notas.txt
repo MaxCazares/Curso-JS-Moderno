@@ -1,0 +1,7 @@
+link para Mongo Atlas
+mongodb+srv://mongmax:prueba1@cluster0.eqmtg.mongodb.net/test
+
+Para ejecutar la base de datos local.
+1) primero ejecutar el comando "mongod" en una terminal
+2) abrir compass y conectarse de manera local (la ip tiene que tener 127.0.0.0)
+3) corroborar que existan datos dentro de la base de datos "veterinaria"

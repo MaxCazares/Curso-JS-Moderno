@@ -1,0 +1,26 @@
+dependencias para instalar
+npm i --save-dev @babel/cli @babel/core @babel/preset-env
+
+comando para transpilar el código con babel
+npx babel "archivo de entrada" --out-file "archivo de salida" --presets=@babel/preset-env
+
+comando para ejecutar el comando de babel definido en package.json
+npm run babel
+
+comando para ejecutar el comando de webpack en package.json
+npm run webpack
+
+comando para instalar el plugin de babel en webpack
+npm i --save-dev babel-loader
+
+comando para crear un servidor con webpack
+npm i --save-dev webpack-dev-server
+
+para correr los comandos dev y watch debes tener dos consolas abiertas y 
+ejecutar cada comando en una de ellas
+
+el problema anterior se soluciona con concurrently (no funciono del todo bien)
+npm i --save-dev concurrently
+
+comando para instalar eslint
+npm i --save-dev eslint

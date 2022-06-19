@@ -1,0 +1,16 @@
+const suma = (a,b) => a + b;
+const resta = (a,b) => a - b;
+
+describe('testing a las funciones de suma y resta', () => {
+    test('suma de 20 y 30', () => {
+        expect(suma(20,30)).toBe(50);
+    });
+
+    test('resta de 50 y 30', () => {
+        expect(resta(50,30)).toBe(20);
+    });
+
+    test('10+10 no es 10', () =>{
+        expect(suma(10,10)).not.toBe(10);
+    });
+});

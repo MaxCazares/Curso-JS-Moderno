@@ -1,0 +1,55 @@
+Pasos para aplicar "Electron" a un proyecto de "React"
+
+1) crear un proyecto de react 
+    npx create-react-app 'nombreApp'
+
+2) instalar los siguientes paquetes como dependencias de desarollo
+    npm i --save-dev electron electron-builder wait-on concurrently cross-env
+
+3) instalar los siguientes paquetes
+    npm i electron-is-dev
+
+4) creamos el siguiente archivo /public/electron.js y agregamos lo siguiente
+
+    const electron = require('electron');
+    const app = electron.app;
+    const BrowserWindow = electron.BrowserWindow;
+
+    const path = require('path');
+    const isDev = require('electron-is-dev');
+
+    let mainWindow;
+
+    function createWindow() {
+    mainWindow = new BrowserWindow({width: 900, height: 680});
+    mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
+    if (isDev) {
+        // Open the DevTools.
+        //BrowserWindow.addDevToolsExtension('<location to your react chrome extension>');
+        mainWindow.webContents.openDevTools();
+    }
+    mainWindow.on('closed', () => mainWindow = null);
+    }
+
+    app.on('ready', createWindow);
+
+    app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') {
+        app.quit();
+    }
+    });
+
+    app.on('activate', () => {
+    if (mainWindow === null) {
+        createWindow();
+    }
+    });
+
+5) agregamos el siguiente comando en la etiqueta de scripts de package.json
+    "electron-dev": "concurrently \"cross-env BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\""
+
+6) agregamos la siguiente etiqueta en el package.json
+    "main": "public/electron.js"
+
+7) para ejecutar el proyecto ejecutamos el comando
+    npm run electron-dev

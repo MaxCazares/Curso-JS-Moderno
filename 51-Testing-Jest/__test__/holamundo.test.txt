@@ -1,0 +1,5 @@
+describe('grupo de pruebas', () => {
+    test('Hola mundo en jest', () =>{});
+
+    test('Otro hola mundo', () =>{});    
+});

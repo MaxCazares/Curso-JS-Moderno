@@ -1,0 +1,22 @@
+const cliente = {
+    nombre: 'max',
+    saldo : 600
+}
+
+describe('test a los clientes', () => {
+    test('cliente premium', () => {
+        expect(cliente.saldo).toBeGreaterThan(400);
+    });
+
+    test('es max', () =>{
+        expect(cliente.nombre).toBe('max');
+    });
+
+    test('no es otro cliente', () =>{
+        expect(cliente.nombre).not.toBe('pedro');
+    });
+
+    test('no tiene 500', () =>{
+        expect(cliente.saldo).not.toBe(500);
+    });
+});

@@ -1,0 +1,7 @@
+import { suma } from "../js/funciones";
+
+describe('suma de dos numeros', () => {
+    test('suma de 10 y 20', () => {
+        expect(suma(10,20)).toBe(30);
+    });
+});

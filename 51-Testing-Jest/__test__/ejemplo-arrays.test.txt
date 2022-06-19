@@ -1,0 +1,11 @@
+const carrito = ['uno', 'dos', 'tres'];
+
+describe('Test al carrito de compra', () =>{
+    test('Longitud de 3', () => {
+        expect(carrito).toHaveLength(3);
+    });
+
+    test('Carrito no vacio', () => {
+        expect(carrito).not.toHaveLength(0);
+    });
+});

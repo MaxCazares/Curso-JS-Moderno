@@ -1,0 +1,32 @@
+{
+  "clientes": [
+    {
+      "nombre": "Eduardo",
+      "email": "juanita68mtzramirez@gmail.com",
+      "telefono": "+525531157480",
+      "empresa": "Tortilleria",
+      "id": 27
+    },
+    {
+      "nombre": "Tony",
+      "email": "mcazaresm1500@alumno.ipn.mx",
+      "telefono": "3463434534",
+      "empresa": "ESCOM - Escuela Superior de Cómputo - IPN",
+      "id": 28
+    },
+    {
+      "nombre": "Eduardo",
+      "email": "juanita68mtzramirez@gmail.com",
+      "telefono": "+525531157480",
+      "empresa": "Lavanderia Cheems",
+      "id": 30
+    },
+    {
+      "nombre": "Valeria",
+      "email": "valeria@tacos.com",
+      "telefono": "12345",
+      "empresa": "Tacos el Gordis",
+      "id": 31
+    }
+  ]
+}

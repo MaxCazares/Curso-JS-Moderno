@@ -1,0 +1,11 @@
+const password = '123456';
+
+describe('String not empty and its lenght longer than 6', () =>{
+    test('Longitud de 6', () => {
+        expect(password).toHaveLength(6);
+    });
+
+    test('password no vacio', () => {
+        expect(password).not.toHaveLength(0);
+    });
+});
